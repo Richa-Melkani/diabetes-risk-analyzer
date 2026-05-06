@@ -1,10 +1,10 @@
 # diabetic-risk-analyzer
 ML-based diabetes risk prediction system
 
-##Project Status
+## Project Status
 ->In progress
 
-##folder structure
+## folder structure
 -datasets/
 -templates/
 -static/
