@@ -2,10 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diabetes Predictor</title>
+    <title>Diabetes Risk Analyzer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
-    <h1>Diabetic Risk Analyser</h1>
+
+<div class="container">
+    <h2>Diabetes Risk Analyzer</h2>
+
+    <form action="/predict" method="post" onsubmit="return validateForm()">
+        <input type="number" step="any" name="Glucose" placeholder="Glucose Level" required>
+        <input type="number" step="any" name="BloodPressure" placeholder="Blood Pressure" required>
+        <input type="number" step="any" name="BMI" placeholder="BMI" required>
+        <input type="number" step="any" name="Age" placeholder="Age" required>
+        <input type="number" step="any" name="DPF" placeholder="Diabetes Pedigree Function" required>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <div class="result">
+        {% if prediction_text %}
+            <h3>{{ prediction_text }}</h3>
+
+            {% if risk_text %}
+                <h3 id="risk">{{ risk_text }}</h3>
+                <h4>Probability: {{ prob_text }}</h4>
+            {% endif %}
+
+            <p>{{ suggestion_text }}</p>
+        {% endif %}
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
 </body>
 </html>
