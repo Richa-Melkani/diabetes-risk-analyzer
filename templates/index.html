@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Diabetes Risk Analyzer</title>
@@ -9,34 +10,70 @@
 
 <body>
 
-<div class="container">
-    <h2>Diabetes Risk Analyzer</h2>
+    <div class="container">
 
-    <form action="/predict" method="post" onsubmit="return validateForm()">
-        <input type="number" step="any" name="Glucose" placeholder="Glucose Level" required>
-        <input type="number" step="any" name="BloodPressure" placeholder="Blood Pressure" required>
-        <input type="number" step="any" name="BMI" placeholder="BMI" required>
-        <input type="number" step="any" name="Age" placeholder="Age" required>
-        <input type="number" step="any" name="DPF" placeholder="Diabetes Pedigree Function" required>
+        <h2>Diabetes Risk Analyzer</h2>
 
-        <button type="submit">Predict</button>
-    </form>
+        <form action="/predict" method="post" onsubmit="return validateForm()">
 
-    <div class="result">
-        {% if prediction_text %}
-            <h3>{{ prediction_text }}</h3>
+            <div class="form-group">
+                <label>
+                    Glucose Level:
+                    <input type="number" step="any" name="Glucose" required>
+                </label>
+            </div>
 
-            {% if risk_text %}
-                <h3 id="risk">{{ risk_text }}</h3>
-                <h4>Probability: {{ prob_text }}</h4>
+            <div class="form-group">
+                <label>
+                    Blood Pressure:
+                    <input type="number" step="any" name="BloodPressure" required>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    BMI:
+                    <input type="number" step="any" name="BMI" required>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    Age:
+                    <input type="number" step="any" name="Age" required>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    Diabetes Pedigree Function:
+                    <input type="number" step="any" name="DPF" required>
+                </label>
+            </div>
+
+            <button type="submit">Predict</button>
+
+        </form>
+
+        <div class="result">
+
+            {% if prediction_text %}
+                <h3>{{ prediction_text }}</h3>
+
+                {% if risk_text %}
+                    <h3 id="risk">{{ risk_text }}</h3>
+                    <h4>Probability: {{ prob_text }}</h4>
+                {% endif %}
+
+                <p>{{ suggestion_text }}</p>
             {% endif %}
 
-            <p>{{ suggestion_text }}</p>
-        {% endif %}
-    </div>
-</div>
+        </div>
 
-<script src="{{ url_for('static', filename='script.js') }}"></script>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
+
 </html>
