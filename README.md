@@ -30,7 +30,7 @@ A Machine Learning based web application that predicts the risk of diabetes usin
 
 ### Machine Learning
 - Scikit-learn
-- Logistic Regression
+- Random Forest Classifier
 - Pandas
 
 ---

@@ -18,7 +18,7 @@ age = float(input("Age: "))
 dpf = float(input("Diabetes Pedigree Function: "))
 
 # Create input array
-input_data = np.array([[glucose, bp, bmi, age, dpf]])
+input_data = np.array([[glucose, bp, bmi, dpf, age]])
 
 prediction = model.predict(input_data)[0]
 

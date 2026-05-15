@@ -23,7 +23,7 @@ def predict():
         age = float(request.form['Age'])
         dpf = float(request.form['DPF'])
 
-        input_data = np.array([[glucose, bp, bmi, age, dpf]])
+        input_data = np.array([[glucose, bp, bmi, dpf, age]])
 
         prediction = model.predict(input_data)[0]
         prob = model.predict_proba(input_data)[0][1]
