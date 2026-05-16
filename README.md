@@ -1,210 +1,165 @@
-# Diabetes Risk Analyzer 🩺
+# 🩺 Diabetes Risk Analyzer
 
-A Machine Learning based web application that predicts the risk of diabetes using health-related parameters.
-
-The project is built using **Python, Flask, Random Forest Machine Learning Model, HTML, CSS, and JavaScript**.
+A Machine Learning-based web application that predicts the risk of diabetes using health parameters such as glucose level, blood pressure, BMI, age, and diabetes pedigree function. The model is trained using Random Forest and deployed using Flask on Render.
 
 ---
 
-# 🌐 Live Demo
+## 🚀 Live Demo
 
-🔗 Live Website:  
-https://your-project-name.onrender.com
-
-> Replace the above link with your actual Render deployment link after deployment.
+👉 https://diabetes-risk-analyzer-vkj3.onrender.com/
 
 ---
 
-# 🚀 Features
+## 📸 Snapshots
 
-- Predicts diabetes risk using Machine Learning
-- Uses Random Forest Classifier model
-- Responsive and modern UI
-- Displays:
-  - Prediction Result
-  - Risk Level
-  - Probability Score
-  - Health Suggestions
-- Background image support
-- Flask backend integration
+### Home Page
+![Home Page](snapshots/home-page_ui.png)
+
+### Prediction Result
+![Prediction Result](snapshots/prediction_result.png)
 
 ---
 
-# 🛠️ Technologies Used
+## 📌 Features
 
-## Frontend
-- HTML5
-- CSS3
-- JavaScript
-
-## Backend
-- Python
-- Flask
-
-## Machine Learning
-- Scikit-learn
-- Pandas
-- NumPy
-- Random Forest Classifier
+- Predict diabetes risk instantly
+- Shows result: Diabetic / Not Diabetic
+- Displays risk level: Low / Medium / High
+- Shows probability percentage
+- Gives health suggestions
+- Clean glassmorphism UI design
+- Fully responsive web interface
 
 ---
 
-# 📂 Project Structure
+## 🧠 Machine Learning Model
 
-```bash
+- Algorithm: Random Forest Classifier
+- Library: Scikit-learn
+- Handles missing values (0 replaced with median)
+- Outputs probability-based prediction
+- Trained on diabetes dataset
+
+---
+
+## 📂 Project Structure
+```
 Diabetes-Risk-Analyzer/
 │
 ├── app.py
 ├── model.py
 ├── predict.py
-├── README.md
 ├── requirements.txt
-├── .gitignore
-│
-├── datasets/
-│   └── diabetes.csv
+├── Procfile
 │
 ├── model/
-│   └── diabetes_model.pkl
+│   └── model.pkl
+│
+├── dataset/
+│   └── diabetes.csv
 │
 ├── static/
 │   ├── style.css
 │   ├── script.js
-│   └── img/
-│       └── img_1.webp
+│   └── img/bg_9.webp
 │
 ├── templates/
 │   └── index.html
 │
-└── screenshots/
-    ├── img1.png
-    ├── img2.png
-    └── img3.png
+└── snapshots/
+    ├── home-page.png
+    └── prediction_result.png
 ```
-
 ---
 
-# ⚙️ Installation & Setup
+## ⚙️ Installation & Setup
 
-## 1️⃣ Clone Repository
-
-```bash
-git clone https://github.com/your-username/Diabetes-Risk-Analyzer.git
+### 1. Clone Repository
 ```
-
+git clone https://github.com/your-username/diabetes-risk-analyzer.git
+cd diabetes-risk-analyzer
+```
 ---
 
-## 2️⃣ Open Project Folder
-
-```bash
-cd Diabetes-Risk-Analyzer
+### 2. Install Dependencies
 ```
-
----
-
-## 3️⃣ Install Requirements
-
-```bash
 pip install -r requirements.txt
 ```
-
 ---
 
-## 4️⃣ Train Machine Learning Model
-
-```bash
+### 3. Train Model (First Time Only)
+```
 python model.py
 ```
-
-This generates the trained `.pkl` model file inside the `model/` folder.
-
 ---
 
-## 5️⃣ Run Flask Application
-
-```bash
+### 4. Run Flask App
+```
 python app.py
 ```
-
----
-
-# 🌐 Open in Browser
-
-```bash
-http://127.0.0.1:5000
+Open in browser:
 ```
+http://127.0.0.1:5000/
+```
+---
+
+## 📊 Input Features
+
+- Glucose: Blood glucose level
+- BloodPressure: Blood pressure value
+- BMI: Body Mass Index
+- Age: Age of patient
+- DiabetesPedigreeFunction: Genetic risk factor
 
 ---
 
-# 📊 Input Parameters
+## 🧪 Output
 
-The application takes the following medical parameters:
-
-- Glucose Level
-- Blood Pressure
-- BMI
-- Age
-- Diabetes Pedigree Function (DPF)
+- Prediction: Diabetic / Not Diabetic
+- Risk Level:
+  - Low Risk 🟢
+  - Medium Risk 🟡
+  - High Risk 🔴
 
 ---
 
-# 🧠 Machine Learning Model
+## ☁️ Deployment
 
-- Algorithm Used: Random Forest Classifier
-- Accuracy Achieved: **77.92%**
-- Model File: `diabetes_model.pkl`
-
----
-
-# 📸 Screenshots
-
-## 🏠 Home Page
-
-![Home Page](screenshots/img1.png)
+- Platform: Render
+- Backend: Flask
+- Server: Gunicorn
+- Model: joblib saved Random Forest model
 
 ---
 
-## 📈 Prediction Result
+## 🛠️ Tech Stack
 
-![Prediction Result](screenshots/img2.png)
-
----
-
-## ⚠️ Risk Analysis
-
-![Risk Analysis](screenshots/img3.png)
-
----
-
-# 🚀 Deployment
-
-This project can be deployed on:
-
+- Python
+- Flask
+- Scikit-learn
+- Pandas
+- NumPy
+- HTML, CSS, JavaScript
 - Render
-- Railway
-- PythonAnywhere
-
-Recommended Platform: **Render**
 
 ---
 
-# 📌 Future Improvements
+## 📈 Future Improvements
 
-- Add more health parameters
-- Improve prediction accuracy
-- Add user authentication
+- Add more medical features
+- Improve accuracy using XGBoost
+- Add login system
 - Store prediction history
-- Add charts and analytics
-- Mobile app integration
+- Mobile app version
 
 ---
 
-# 👩‍💻 Author
+## 👩‍💻 Author
 
-Developed by **Richa Melkani**
+Richa Melkani
 
 ---
 
-# 📜 License
+## 📜 License
 
-This project is developed for educational and learning purposes only.
+This project is for educational purposes only.
