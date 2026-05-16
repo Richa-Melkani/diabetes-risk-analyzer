@@ -1,114 +1,210 @@
-# Diabetes Risk Analyzer
+# Diabetes Risk Analyzer 🩺
 
-🚧 In Progress
+A Machine Learning based web application that predicts the risk of diabetes using health-related parameters.
 
-A Machine Learning based web application that predicts the risk of diabetes using user health data. This project is built using Python, Flask, HTML, CSS, JavaScript, and Machine Learning.
-
----
-
-## 📌 Features
-
-- User-friendly web interface
-- Diabetes risk prediction
-- Machine Learning model integration
-- Flask backend support
-- Responsive frontend design
-- Real-time form input handling
+The project is built using **Python, Flask, Random Forest Machine Learning Model, HTML, CSS, and JavaScript**.
 
 ---
 
-## 🛠️ Tech Stack
+# 🌐 Live Demo
 
-### Frontend
-- HTML
-- CSS
+🔗 Live Website:  
+https://your-project-name.onrender.com
+
+> Replace the above link with your actual Render deployment link after deployment.
+
+---
+
+# 🚀 Features
+
+- Predicts diabetes risk using Machine Learning
+- Uses Random Forest Classifier model
+- Responsive and modern UI
+- Displays:
+  - Prediction Result
+  - Risk Level
+  - Probability Score
+  - Health Suggestions
+- Background image support
+- Flask backend integration
+
+---
+
+# 🛠️ Technologies Used
+
+## Frontend
+- HTML5
+- CSS3
 - JavaScript
 
-### Backend
+## Backend
 - Python
 - Flask
 
-### Machine Learning
+## Machine Learning
 - Scikit-learn
-- Random Forest Classifier
 - Pandas
+- NumPy
+- Random Forest Classifier
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
-```
-diabetic-risk-analyzer/
-│
-├── datasets/
-│   └── diabetes.csv
-│
-├── static/
-│   ├── style.css
-│   └── script.js
-│
-├── templates/
-│   └── index.html
+```bash
+Diabetes-Risk-Analyzer/
 │
 ├── app.py
 ├── model.py
 ├── predict.py
 ├── README.md
-└── LICENSE
+├── requirements.txt
+├── .gitignore
+│
+├── datasets/
+│   └── diabetes.csv
+│
+├── model/
+│   └── diabetes_model.pkl
+│
+├── static/
+│   ├── style.css
+│   ├── script.js
+│   └── img/
+│       └── img_1.webp
+│
+├── templates/
+│   └── index.html
+│
+└── screenshots/
+    ├── img1.png
+    ├── img2.png
+    └── img3.png
 ```
 
 ---
 
-## 📊 Dataset
+# ⚙️ Installation & Setup
 
-This project uses the Pima Indians Diabetes Dataset for training the machine learning model.
+## 1️⃣ Clone Repository
 
-Dataset features include:
-- Glucose
-- Blood Pressure
-- BMI
-- DiabetesPedigreeFunction
-- Age
-- Outcome
-
----
-
-## ⚙️ How It Works
-
-1. User enters health-related details
-2. Data is sent to Flask backend
-3. Machine Learning model processes input
-4. Prediction result is displayed on screen
-
----
-
-## 🚀 Future Improvements
-
-- Better UI/UX
-- Deployment on cloud platform
-- More accurate ML models
-- Prediction history tracking
-- Authentication system
-
----
-
-## ▶️ Run Project
-
+```bash
+git clone https://github.com/your-username/Diabetes-Risk-Analyzer.git
 ```
+
+---
+
+## 2️⃣ Open Project Folder
+
+```bash
+cd Diabetes-Risk-Analyzer
+```
+
+---
+
+## 3️⃣ Install Requirements
+
+```bash
 pip install -r requirements.txt
+```
+
+---
+
+## 4️⃣ Train Machine Learning Model
+
+```bash
+python model.py
+```
+
+This generates the trained `.pkl` model file inside the `model/` folder.
+
+---
+
+## 5️⃣ Run Flask Application
+
+```bash
 python app.py
 ```
 
 ---
 
-## 📸 Screenshots
+# 🌐 Open in Browser
 
-Screenshots will be added soon.
+```bash
+http://127.0.0.1:5000
+```
 
 ---
 
-## 👩‍💻 Author
+# 📊 Input Parameters
 
-Richa Melkani
+The application takes the following medical parameters:
 
-```
+- Glucose Level
+- Blood Pressure
+- BMI
+- Age
+- Diabetes Pedigree Function (DPF)
+
+---
+
+# 🧠 Machine Learning Model
+
+- Algorithm Used: Random Forest Classifier
+- Accuracy Achieved: **77.92%**
+- Model File: `diabetes_model.pkl`
+
+---
+
+# 📸 Screenshots
+
+## 🏠 Home Page
+
+![Home Page](screenshots/img1.png)
+
+---
+
+## 📈 Prediction Result
+
+![Prediction Result](screenshots/img2.png)
+
+---
+
+## ⚠️ Risk Analysis
+
+![Risk Analysis](screenshots/img3.png)
+
+---
+
+# 🚀 Deployment
+
+This project can be deployed on:
+
+- Render
+- Railway
+- PythonAnywhere
+
+Recommended Platform: **Render**
+
+---
+
+# 📌 Future Improvements
+
+- Add more health parameters
+- Improve prediction accuracy
+- Add user authentication
+- Store prediction history
+- Add charts and analytics
+- Mobile app integration
+
+---
+
+# 👩‍💻 Author
+
+Developed by **Richa Melkani**
+
+---
+
+# 📜 License
+
+This project is developed for educational and learning purposes only.
