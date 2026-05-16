@@ -4,23 +4,7 @@ A Machine Learning-based web application that predicts the risk of diabetes usin
 
 ---
 
-## 🚀 Live Demo
-
-👉 https://diabetes-risk-analyzer-vkj3.onrender.com/
-
----
-
-## 📸 Snapshots
-
-### Home Page
-![Home Page](snapshots/home-page_ui.png)
-
-### Prediction Result
-![Prediction Result](snapshots/prediction_result.png)
-
----
-
-## 📌 Features
+## 🚀 Features
 
 - Predict diabetes risk instantly
 - Shows result: Diabetic / Not Diabetic
@@ -38,40 +22,51 @@ A Machine Learning-based web application that predicts the risk of diabetes usin
 - Library: Scikit-learn
 - Handles missing values (0 replaced with median)
 - Outputs probability-based prediction
-- Trained on diabetes dataset
+- Trained on standard diabetes dataset
+
+---
+
+## 📊 Input Features and their Ranges
+
+| Feature        | Low    | Medium        | High    |
+| -------------- | ------ | ------------- | ------- |
+| Glucose        | <70    | 100–125       | ≥126    |
+| Blood Pressure | <90/60 | 120/80–139/89 | ≥140/90 |
+| BMI            | <18.5  | 25–29.9       | ≥30     |
+| Age            | <30    | 30–50         | >50     |
+| DPF            | 0–0.4  | 0.4–1.0       | >1.0    |
 
 ---
 
 ## 📂 Project Structure
 ```
 Diabetes-Risk-Analyzer/
-│
+
 ├── app.py
 ├── model.py
 ├── predict.py
 ├── requirements.txt
 ├── Procfile
-│
+
 ├── model/
 │   └── model.pkl
-│
+
 ├── dataset/
 │   └── diabetes.csv
-│
+
 ├── static/
 │   ├── style.css
 │   ├── script.js
 │   └── img/bg_9.webp
-│
+
 ├── templates/
 │   └── index.html
-│
+
 └── snapshots/
-    ├── home-page.png
+    ├── home-page_ui.png
     └── prediction_result.png
 ```
 ---
-
 ## ⚙️ Installation & Setup
 
 ### 1. Clone Repository
@@ -103,26 +98,6 @@ http://127.0.0.1:5000/
 ```
 ---
 
-## 📊 Input Features
-
-- Glucose: Blood glucose level
-- BloodPressure: Blood pressure value
-- BMI: Body Mass Index
-- Age: Age of patient
-- DiabetesPedigreeFunction: Genetic risk factor
-
----
-
-## 🧪 Output
-
-- Prediction: Diabetic / Not Diabetic
-- Risk Level:
-  - Low Risk 🟢
-  - Medium Risk 🟡
-  - High Risk 🔴
-
----
-
 ## ☁️ Deployment
 
 - Platform: Render
@@ -144,6 +119,21 @@ http://127.0.0.1:5000/
 
 ---
 
+## 🚀 Live Demo
+
+👉 https://diabetes-risk-analyzer-vkj3.onrender.com/
+
+---
+
+## 📸 Snapshots
+
+### Home Page
+![Home Page](snapshots/home-page_ui.png)
+
+### Prediction Result
+![Prediction Result](snapshots/prediction_result.png)
+
+---
 ## 📈 Future Improvements
 
 - Add more medical features
