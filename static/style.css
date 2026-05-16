@@ -20,13 +20,13 @@ body {
     justify-content: center;
     align-items: center;
 
-    padding: 15px;
+    padding: 20px;
 
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-/* Dark overlay */
+/* Dark Overlay */
 body::before {
     content: "";
     position: absolute;
@@ -40,104 +40,135 @@ body::before {
     position: relative;
     z-index: 1;
 
-    width: min(600px, 95vw);
-    min-height: 80vh;
-    max-height: 95vh;
+    width: min(650px, 95vw);
 
-    padding: 25px;
+    padding: 30px;
 
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.14);
+
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
-    border-radius: 20px;
+    border-radius: 22px;
+
     border: 1px solid rgba(255, 255, 255, 0.25);
 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
 
     color: #fff;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+
+    gap: 18px;
 }
 
 /* TITLE */
 h2 {
     text-align: center;
-    margin-bottom: 15px;
     color: #fff;
-    font-size: 24px;
+    font-size: 34px;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
 /* FORM */
 form {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 18px;
 }
 
 /* FORM GROUP */
 .form-group {
-    margin-bottom: 8px;
+    width: 100%;
 }
 
 /* LABEL */
 .form-group label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
 
+    margin-bottom: 8px;
+
+    font-size: 16px;
     font-weight: 600;
+
     color: #f5f5f5;
-    font-size: 15px;
 }
 
 /* INPUT */
 .form-group input {
-    width: 55%;
-    padding: 10px;
+    width: 100%;
 
-    border-radius: 10px;
+    padding: 14px 16px;
+
     border: none;
     outline: none;
 
-    font-size: 14px;
+    border-radius: 12px;
 
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255,255,255,0.28);
+
     color: #000;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+/* INPUT FOCUS */
+.form-group input:focus {
+    background: rgba(255,255,255,0.42);
+    transform: scale(1.01);
+}
+
+/* PLACEHOLDER */
+.form-group input::placeholder {
+    color: #444;
 }
 
 /* BUTTON */
 button {
     width: 100%;
-    padding: 12px;
+
+    padding: 14px;
 
     border: none;
-    border-radius: 12px;
+    border-radius: 14px;
 
     background: #ffffff;
+
     color: #333;
 
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
 
     cursor: pointer;
-    transition: 0.3s;
+
+    transition: 0.3s ease;
 }
 
+/* BUTTON HOVER */
 button:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
+    background: #f2f2f2;
 }
 
 /* RESULT */
 .result {
-    margin-top: 15px;
+    margin-top: 10px;
+
     text-align: center;
-    font-size: 14px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
 }
 
-.result h3, .result h4, .result p {
+.result h3,
+.result h4,
+.result p {
     margin: 5px 0;
 }
 
@@ -157,33 +188,63 @@ button:hover {
     font-weight: bold;
 }
 
-/* RESPONSIVE MOBILE */
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
 @media (max-width: 600px) {
 
+    body {
+        padding: 12px;
+        align-items: center;
+    }
+
     .container {
-        width: 95vw;
-        min-height: 85vh;
-        padding: 18px;
+
+        width: 100%;
+
+        padding: 24px 18px;
+
+        border-radius: 18px;
     }
 
     h2 {
-        font-size: 22px;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    form {
+        gap: 16px;
     }
 
     .form-group label {
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 14px;
-        gap: 6px;
+
+        font-size: 15px;
+
+        margin-bottom: 7px;
     }
 
     .form-group input {
+
         width: 100%;
-        font-size: 15px;
+
+        padding: 14px;
+
+        font-size: 16px;
     }
 
     button {
-        font-size: 16px;
-        padding: 12px;
+
+        width: 100%;
+
+        padding: 14px;
+
+        font-size: 17px;
+
+        margin-top: 5px;
+    }
+
+    .result {
+        font-size: 14px;
     }
 }

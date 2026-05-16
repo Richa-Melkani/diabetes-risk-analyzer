@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diabetes Risk Analyzer</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -17,38 +18,28 @@
         <form action="/predict" method="post" onsubmit="return validateForm()">
 
             <div class="form-group">
-                <label>
-                    Glucose Level:
-                    <input type="number" step="any" name="Glucose" required>
-                </label>
+                <label for="glucose">Glucose Level</label>
+                <input type="number" step="any" id="glucose" name="Glucose" placeholder="Enter glucose level" required>
             </div>
 
             <div class="form-group">
-                <label>
-                    Blood Pressure:
-                    <input type="number" step="any" name="BloodPressure" required>
-                </label>
+                <label for="bp">Blood Pressure</label>
+                <input type="number" step="any" id="bp" name="BloodPressure" placeholder="Enter blood pressure" required>
             </div>
 
             <div class="form-group">
-                <label>
-                    BMI:
-                    <input type="number" step="any" name="BMI" required>
-                </label>
+                <label for="bmi">BMI</label>
+                <input type="number" step="any" id="bmi" name="BMI" placeholder="Enter BMI" required>
             </div>
 
             <div class="form-group">
-                <label>
-                    Age:
-                    <input type="number" step="any" name="Age" required>
-                </label>
+                <label for="age">Age</label>
+                <input type="number" step="any" id="age" name="Age" placeholder="Enter age" required>
             </div>
 
             <div class="form-group">
-                <label>
-                    Diabetes Pedigree Function:
-                    <input type="number" step="any" name="DPF" required>
-                </label>
+                <label for="dpf">Diabetes Pedigree Function</label>
+                <input type="number" step="any" id="dpf" name="DPF" placeholder="Enter DPF value" required>
             </div>
 
             <button type="submit">Predict</button>
