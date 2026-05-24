@@ -25,7 +25,14 @@ A Machine Learning-based web application that predicts the risk of diabetes usin
 - Trained on standard diabetes dataset
 
 ---
+## 📈 Model Performance
 
+- Current Accuracy: 77.92%
+- Dataset preprocessing improves prediction quality
+- Trained using train-test split method
+- Random Forest helps reduce overfitting
+
+---
 ## 📊 Input Features and their Ranges
 
 | Feature        | Low    | Medium        | High    |
@@ -144,6 +151,11 @@ http://127.0.0.1:5000/
 
 ---
 
+## ⚠️ Disclaimer
+
+This project is developed for educational purposes only and should not be considered a substitute for professional medical diagnosis.
+---
+
 ## 👩‍💻 Author
 
 Richa Melkani
@@ -152,4 +164,4 @@ Richa Melkani
 
 ## 📜 License
 
-This project is for educational purposes only.
+MIT License
