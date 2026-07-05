@@ -122,15 +122,13 @@ http://127.0.0.1:5000/
 - Pandas
 - NumPy
 - HTML, CSS, JavaScript
-- Render
 
 ---
 
 ## 🚀 Live Demo
 
-👉 https://diabetes-risk-analyzer-vkj3.onrender.com/
-
-👉 https://web-production-8418b4.up.railway.app/
+- **Render:** https://diabetes-risk-analyzer-vkj3.onrender.com/
+- **Railway:** https://web-production-8418b4.up.railway.app/
 
 ---
 
